@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CATCH the Virus Study</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_consent">Consent</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_test">testActivity</string>
+    <string name="title_activity_send_device_info">SendDeviceInfo</string>
+    <string name="title_activity_get_personal_info">Enter Info</string>
+    <string name="title_activity_send_email">Consent Email</string>
+    <string name="title_activity_snooze">Snooze</string>
+    <string name="title_activity_main">Location Manager</string>
+    <string name="title_activity_caslogin">Login</string>
+    <string name="crash_toast_text">Ooooops ! I crashed, but a report has been sent to my developer to help fix the issue !</string>
+    <string name="title_activity_logged_out">LoggedOutActivity</string>
+    <string name="title_activity_view_terms">ViewTerms</string>
+    <string name="ok"> OK </string>
+    <string name="cancel">CANCEL</string>
+
+</resources>

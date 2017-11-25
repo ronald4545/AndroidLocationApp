@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.umd.mindlab.androidservicetest.GetPersonalInfo"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp"
+    tools:showIn="@layout/activity_get_personal_info">
+
+    <EditText
+        android:id="@+id/firstNameEdit"
+        android:layout_width="150dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName|textNoSuggestions"
+        android:nextFocusDown="@+id/lastNameEdit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintHorizontal_bias="0.07"/>
+
+    <EditText
+        android:id="@+id/lastNameEdit"
+        android:layout_width="150dp"
+        android:layout_height="44dp"
+        android:hint="Last Name"
+        android:nextFocusDown="@+id/dobEdit"
+        android:inputType="textPersonName|textNoSuggestions"
+        app:layout_constraintLeft_toRightOf="@+id/firstNameEdit"
+        app:layout_constraintTop_toBottomOf="@+id/nameText"
+        android:layout_marginLeft="10dp"
+         />
+
+    <EditText
+        android:id="@+id/dobEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="e.g. 01/31"
+        android:inputType="date"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dobText" />
+
+
+    <EditText
+        android:id="@+id/uidEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="e.g. 123456789"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintTop_toBottomOf="@+id/uidText" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="300dp"
+        android:layout_marginLeft="25dp"
+        android:layout_height="wrap_content"
+        android:text="Name (enter exactly as registered with University)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/dobText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="Birth Date (mm/dd)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <TextView
+        android:id="@+id/uidText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="UID"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <Button
+        android:id="@+id/submitPersInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uidEdit"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is to create a hashed identifier for you. Only this encrypted identifier will be transmitted. Your data will be destroyed and will not be stored on the phone or on the location server."
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+
+</android.support.constraint.ConstraintLayout>
+

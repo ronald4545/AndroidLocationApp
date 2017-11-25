@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.umd.mindlab.androidservicetest.MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp"
+    tools:showIn="@layout/activity_main">
+
+    <!-- this is no longer necessary, will delete it soon
+    <FrameLayout
+        android:id="@+id/place_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout> /-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mdflag" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/place_holder2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <!-- This is the layout for the enable location button /-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_weight = ".25">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:text="Enable Location Sharing"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ToggleButton
+                    android:id="@+id/enableToggle"
+                    android:layout_width="73dp"
+                    android:layout_height="47dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="ToggleButton" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Location Status"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+        <!-- This is the layout for the Snoozing /-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight = ".25">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/snoozeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="Snooze for (hours : minutes):"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/hourEdit"
+                        android:layout_width="45dp"
+                        android:layout_height="43dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="00"
+                        android:inputType="number"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/colon"
+                        android:layout_width="20dp"
+                        android:layout_height="43dp"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/minutesEdit"
+                        android:layout_width="45dp"
+                        android:layout_height="43dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="00"
+                        android:inputType="number"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/snoozeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Snooze"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+        <!-- This is the layout for the data counter button /-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight = ".25" >
+
+            <!-- This is the counting display /-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/dataCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="You've contributed "
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dataView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/dataCounter2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=" data points!"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/resetCountButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Reset Count"
+                    tools:layout_editor_absoluteX="41dp"
+                    tools:layout_editor_absoluteY="146dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginEnd="25dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/viewTermsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:text="View Terms"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- This is the layout for the logout and reset app buttons /-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight = ".25" >
+
+            <Button
+                android:id="@+id/testButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:text="Reset App"
+                android:layout_marginEnd="90dp"
+                android:layout_marginRight="90dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/logOutButton"
+                android:layout_width="88dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:text="Log Out"
+                android:textSize="@dimen/fab_margin"
+                android:textColor="@color/UpperRightRed"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Button
+        android:id="@+id/testButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Set Terms Accepted to False"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hourEdit"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.05"/ -->
+
+</android.support.constraint.ConstraintLayout>
