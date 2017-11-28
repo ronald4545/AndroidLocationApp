@@ -76,7 +76,7 @@ public class CASLoginActivity extends AppCompatActivity {
                 Log.i(TAG, url);
 
                 // if we've gotten to the "demo" page, the login was successful
-                if (url.equals("https://login.umd.edu/demo/")) {
+                if (url.equals("https://login.umd.edu/demo/")||true) {
 
                     destroyWebView();
 

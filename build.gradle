@@ -3,6 +3,9 @@
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url 'https://maven.google.com'
+        }
     }
 
     dependencies {
@@ -12,6 +15,8 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+
+apply plugin: "jacoco"
 
 allprojects {
     repositories {
